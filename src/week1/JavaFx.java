@@ -29,6 +29,10 @@ public class JavaFx extends Application {
 
         Circle circle1 = new Circle();
         Circle circle2 = new Circle();
+        Circle circle3 = new Circle();
+        Circle circle4 = new Circle();
+        Circle circle5 = new Circle();
+        Circle circle6 = new Circle();
 
         circle1.setRadius(50);
         circle1.setStroke(Color.BLACK);
@@ -38,14 +42,30 @@ public class JavaFx extends Application {
         circle2.setStroke(Color.BLACK);
         circle2.setFill(Color.RED);
 
+        circle3.setRadius(50);
+        circle3.setStroke(Color.BLACK);
+        circle3.setFill(Color.YELLOW);
+
+        circle4.setRadius(50);
+        circle4.setStroke(Color.BLACK);
+        circle4.setFill(Color.PURPLE);
+
+        circle5.setRadius(50);
+        circle5.setStroke(Color.BLACK);
+        circle5.setFill(Color.GREEN);
+
+        circle6.setRadius(50);
+        circle6.setStroke(Color.WHITE);
+        circle6.setFill(Color.WHITE);
+
         Random random = new Random();
 
         int i = 0;
         Set <Circle> circleList = new HashSet<>();
 
 
-        while(i < 2){
-            int r = random.nextInt(3);
+        while(i < 7){
+            int r = random.nextInt(6);
                 if(r == 1){
                     circleList.add(circle1);
                     i++;
@@ -54,6 +74,23 @@ public class JavaFx extends Application {
                 else if(r == 2){
                     circleList.add(circle2);
                     i++;
+                }
+
+                else if(r == 3){
+                    circleList.add(circle3);
+                    i++;
+                }
+                else if(r == 4){
+                    circleList.add(circle4);
+                    i++;
+                }
+
+                else if(r == 5){
+                    circleList.add(circle5);
+                    i++;
+                }
+                else if(r == 6){
+                    circleList.add(circle6);
                 }
             }
 
@@ -66,7 +103,7 @@ public class JavaFx extends Application {
 
 
 
-        Scene scene1 = new Scene(pane1,800,800);
+        Scene scene1 = new Scene(pane1,600,600);
 
         primaryStage.setTitle("title");
         primaryStage.setScene(scene1);
